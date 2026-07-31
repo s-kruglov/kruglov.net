@@ -153,6 +153,8 @@ a:hover { opacity: 0.75; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
 h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.75rem, 1.4rem + 1.4vw, 2.8rem); line-height: 1.1; letter-spacing: -0.02em; }
 h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.35rem, 1.15rem + 0.8vw, 2.1rem); line-height: 1.2; letter-spacing: -0.01em; }
 h3 { font-weight: 600; font-size: clamp(1.1rem, 1rem + 0.4vw, 1.35rem); line-height: 1.25; }
@@ -265,7 +267,7 @@ h3.section-title { font-family: var(--font-display); font-weight: 600; font-size
 .vcard a:not(.read-more) { text-decoration: none; }
 .vcard img { width: 100%; height: auto; border-radius: var(--r-card); display: block; }
 .read-more { display: inline-block; margin-top: 8px; font-size: 0.875rem; font-weight: 600; color: var(--accent); }
-.vcard h5 { margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.vcard h4, .vcard h5 { margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
 .vcard img.card-icon { width: 20px; height: 20px; flex-shrink: 0; }
 .vcard p { font-weight: 500; font-size: 1rem; line-height: 1.5; color: var(--text-secondary); }
 
@@ -352,7 +354,7 @@ body.archive .blog-main > div:last-child { grid-column: 1 / -1; }
 .prc-card { background: var(--bg-card); border: 0.5px solid var(--border); border-radius: var(--r-card); padding: 28px; display: flex; flex-direction: column; gap: 16px; }
 .prc-card h4 { margin-bottom: 0; }
 .prc-card p { font-size: 0.9375rem; line-height: 1.6; color: var(--text-secondary); }
-.prc-card h6 { margin-bottom: 0; }
+.prc-card h5, .prc-card h6 { margin-bottom: 0; }
 .prc-price { font-size: clamp(1.35rem, 1.15rem + 0.8vw, 2rem); font-weight: 700; color: var(--accent); line-height: 1.2; }
 .prc-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
 .prc-list li { font-size: 0.875rem; line-height: 1.5; color: var(--text-secondary); padding-left: 16px; position: relative; }
@@ -714,21 +716,23 @@ input[type="checkbox"] { accent-color: var(--accent); }
 </div>
 
 <div class="section reveal" style="border-top:none">
+  <h2 class="eyebrow sr-only">Как я работаю</h2>
+  <h3 class="section-title sr-only">Маркетинговый подход к разработке сайтов</h3>
   <div class="cards-grid">
     <div class="vcard">
-      <h5><img src="https://kruglov.net/wp-content/themes/kruglovnet/assets/images/structure.svg" alt="Структура" width="20" height="20" class="card-icon">Структура сайта под реальный спрос</h5>
+      <h4><img src="https://kruglov.net/wp-content/themes/kruglovnet/assets/images/structure.svg" alt="Структура" width="20" height="20" class="card-icon">Структура сайта под реальный спрос</h4>
       <p>Архитектура сайта формируется на основе спроса, сценариев выбора и пользовательских задач. Каждый сегмент аудитории получает понятный путь к целевому действию.</p>
     </div>
     <div class="vcard">
-      <h5><img src="https://kruglov.net/wp-content/themes/kruglovnet/assets/images/code.svg" alt="Технологии" width="20" height="20" class="card-icon">Технологии под задачу проекта</h5>
+      <h4><img src="https://kruglov.net/wp-content/themes/kruglovnet/assets/images/code.svg" alt="Технологии" width="20" height="20" class="card-icon">Технологии под задачу проекта</h4>
       <p>Для корпоративных сайтов используется WordPress с кастомной разработкой. Для отдельных посадочных страниц и специальных сценариев применяются более лёгкие решения, если они эффективнее для задачи.</p>
     </div>
     <div class="vcard">
-      <h5><img src="https://kruglov.net/wp-content/themes/kruglovnet/assets/images/analytics.svg" alt="Аналитика" width="20" height="20" class="card-icon">Доработки на основе данных, а не ощущений</h5>
+      <h4><img src="https://kruglov.net/wp-content/themes/kruglovnet/assets/images/analytics.svg" alt="Аналитика" width="20" height="20" class="card-icon">Доработки на основе данных, а не ощущений</h4>
       <p>После запуска анализируются поведение пользователей и конверсия. На основе данных внедряются изменения в структуру, интерфейс и контент сайта.</p>
     </div>
     <div class="vcard">
-      <h5><img src="https://kruglov.net/wp-content/themes/kruglovnet/assets/images/man.svg" alt="Ответственность" width="20" height="20" class="card-icon">Единая точка ответственности за результат</h5>
+      <h4><img src="https://kruglov.net/wp-content/themes/kruglovnet/assets/images/man.svg" alt="Ответственность" width="20" height="20" class="card-icon">Единая точка ответственности за результат</h4>
       <p>Вы работаете с одним специалистом, который отвечает за проект: от исследования и проектирования до разработки и развития сайта.</p>
     </div>
   </div>
@@ -758,7 +762,7 @@ input[type="checkbox"] { accent-color: var(--accent); }
   <div class="loop">Исследование формирует структуру <span>→</span> структура определяет пользовательский опыт <span>→</span> данные помогают развивать сайт</div>
 
   <div class="process-detail">
-    <h6 style="margin-bottom: 32px">Процесс в действии</h6>
+    <h5 style="margin-bottom: 32px">Процесс в действии</h5>
     <div class="timeline">
       <div class="tl-phase-label">Фаза 1 · Исследование и проектирование</div>
       <div class="timeline-item">
@@ -813,7 +817,7 @@ input[type="checkbox"] { accent-color: var(--accent); }
       </div>
     </div>
   </div>
-  <h6 style="margin-top: 48px; margin-bottom: 32px">Направления развития после запуска</h6>
+  <h5 style="margin-top: 48px; margin-bottom: 32px">Направления развития после запуска</h5>
   <div class="cards-grid growth-grid">
     <div class="vcard">
       <h4>Новые возможности</h4>
@@ -877,15 +881,15 @@ input[type="checkbox"] { accent-color: var(--accent); }
       <p>Многостраничный сайт с расширенной структурой, несколькими направлениями и большим объёмом контента.</p>
     </div>
   </div>
-  <h6 style="margin-top: 36px; margin-bottom: 16px;">Во все проекты входят</h6>
+  <h5 style="margin-top: 36px; margin-bottom: 16px;">Во все проекты входят</h5>
   <div class="prc-terms" style="margin-bottom:36px">
     <div class="prc-term">— проектирование структуры сайта и пользовательских сценариев;</div>
     <div class="prc-term">— разработка контентной структуры: логика страниц, смысловые блоки и ключевые сообщения;</div>
     <div class="prc-term">— подготовка текстовых материалов для ключевых блоков сайта на основе информации о бизнесе и согласованных материалов.</div>
   </div>
-  <h6 style="margin-top: 36px; margin-bottom: 16px;">Важно</h6>
+  <h5 style="margin-top: 36px; margin-bottom: 16px;">Важно</h5>
   <p style="color: var(--text-secondary); max-width: 640px; margin-bottom: 36px;">В разработку сайта не входят создание логотипа и фирменного стиля, а также подготовка специализированных материалов, требующих профильной экспертизы.</p>
-  <h6 style="margin-bottom: 16px;">Основной формат сотрудничества</h6>
+  <h5 style="margin-bottom: 16px;">Основной формат сотрудничества</h5>
   <div class="prc-terms">
     <div class="prc-term">— Работа делится на этапы: каждый следующий этап начинается после утверждения результата предыдущего.</div>
     <div class="prc-term">— Оплата разбивается на 3 этапа:</div>
@@ -898,8 +902,7 @@ input[type="checkbox"] { accent-color: var(--accent); }
   <p class="section-sub" style="margin-bottom:24px">Сайт можно развивать по мере появления новых задач бизнеса. Формируется список доработок, после чего согласовывается объём работ и выполняются необходимые изменения.</p>
   <div class="prc-grid sp-prc-grid">
     <div class="prc-card">
-      <h6>Стоимость:</h6>
-      <div class="prc-price">2 000 ₽ / час</div>
+      <h4>Стоимость:</h4>      <div class="prc-price">2 000 ₽ / час</div>
       <p style="font-size:0.875rem;color:var(--text-muted)">Минимальный объём работ — 1 час.</p>
     </div>
   </div>
