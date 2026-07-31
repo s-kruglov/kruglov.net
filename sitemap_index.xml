@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="./main-sitemap.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://kruglov.net/main-sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<sitemap>
-		<loc>./post-sitemap.xml</loc>
+		<loc>https://kruglov.net/post-sitemap.xml</loc>
 		<lastmod>2026-07-31T11:38:58+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>./page-sitemap.xml</loc>
+		<loc>https://kruglov.net/page-sitemap.xml</loc>
 		<lastmod>2026-07-31T15:39:57+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>./category-sitemap.xml</loc>
+		<loc>https://kruglov.net/category-sitemap.xml</loc>
 		<lastmod>2026-07-31T11:38:58+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>./post_tag-sitemap.xml</loc>
+		<loc>https://kruglov.net/post_tag-sitemap.xml</loc>
 		<lastmod>2026-07-31T11:38:58+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>./author-sitemap.xml</loc>
+		<loc>https://kruglov.net/author-sitemap.xml</loc>
 		<lastmod>2026-07-20T06:58:29+00:00</lastmod>
 	</sitemap>
 </sitemapindex>

@@ -17,6 +17,6 @@ Disallow: /*?s=
 Disallow: /search/
 Allow: /wp-content/uploads/
 
-Sitemap: https://kruglov.local/sitemap_index.xml
+Sitemap: https://kruglov.net/sitemap_index.xml
 # ---------------------------
 # END YOAST BLOCK
